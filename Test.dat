@@ -1,0 +1,4 @@
+This is a Gauss Seidel data file.
+Iteration k         norm(residual_k)
+0                   990
+1                   0
