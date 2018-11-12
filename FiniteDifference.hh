@@ -11,19 +11,22 @@ class FiniteDifference
 {
 public:
   FiniteDifference();
-  FiniteDifference(double h, double L, double alpha, double beta, double gamma);
+  FiniteDifference(double L, double alpha, double beta, double gamma);
   FiniteDifference(const FiniteDifference& scheme);
   ~FiniteDifference();
 
-  SparseMatrix constructLAD(double alpha, double beta);
+  double getAlpha();
+  double getBeta();
+  double getGamma();
+  SparseMatrix getA();
 
-  void linearAdvectionDiffusion(double alpha, double beta);
-  void linearDiffusion();
-  
+  SparseMatrix constructMatrix(double h);
+
 private:
-  double L_;
-  double h_;
-  double alpha_, beta_, gamma_;
+  double L_, alpha_, beta_, gamma_;
+  SparseMatrix A_;
 };
+
+void runScheme(double h, double L, double alpha, double beta, double gamma);
 
 #endif

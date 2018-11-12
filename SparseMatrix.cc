@@ -105,6 +105,7 @@ void SparseMatrix::addEntry(unsigned int rowNum, unsigned int colNum, double inp
 // getEntry
 double SparseMatrix::getEntry(unsigned int rowNum, unsigned int colNum) const
 {
+  // std::cout << "Problem at point = " << rowNum << " , "<< colNum << '\n';
   if (rowNum > rowSize_) // Error checks whether row/column inputs are possible
   {
     throw std::invalid_argument("Row input out of range");
@@ -121,10 +122,21 @@ double SparseMatrix::getEntry(unsigned int rowNum, unsigned int colNum) const
   {
     std::vector<unsigned int>* accessedColumnIndices = colIndex_->at(rowNum); // Copy the row of column indices that we want to work with
     int counter = 0; // Initialise counter to zero
+    // std::cout << "accessedColumnIndices Size = " << accessedColumnIndices->size() << '\n';
+    // for (unsigned int i : *accessedColumnIndices )
+    // {
+    //   std::cout << i << '\n';
+    // }
     while (colNum != accessedColumnIndices->at(counter)) // Search for the position of the column index we're looking for in this row of indices
     {
       counter++;
+      if (!(counter < accessedColumnIndices->size()))
+      {
+        // std::cout << "Yo" << '\n';
+        return 0.0;
+      }
     }
+    // std::cout << "counter found" << std::endl;
     return (rowList_->at(rowNum))->at(counter); // Return the value in the row of variables at found position
   }
 }
