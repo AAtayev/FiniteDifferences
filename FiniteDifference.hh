@@ -10,23 +10,32 @@
 class FiniteDifference
 {
 public:
-  FiniteDifference();
-  FiniteDifference(double L, double alpha, double beta, double gamma);
-  FiniteDifference(const FiniteDifference& scheme);
-  ~FiniteDifference();
+  FiniteDifference(); // Default Constructor
+  FiniteDifference(int J, double L, double alpha, double beta, double gamma, double b_0, double b_L);
+  FiniteDifference(const FiniteDifference& scheme); // Copy Constructor
+  ~FiniteDifference(); // Destructor
 
+  int getJ();
+  double getL();
   double getAlpha();
   double getBeta();
   double getGamma();
-  SparseMatrix getA();
+  double getb_0();
+  double getb_L();
+  // SparseMatrix getA();
 
-  SparseMatrix constructMatrix(double h);
+
+  SparseMatrix constructMatrix(); // Constructs the "differential operator" matrix A
 
 private:
-  double L_, alpha_, beta_, gamma_;
-  SparseMatrix A_;
+  int J_; // The number of points in the discretisation
+  double L_; // Length of interval
+  double b_0_, b_L_; // Boundary conditions
+  double alpha_, beta_, gamma_; // Equation parameters
 };
 
-void runScheme(double h, double L, double alpha, double beta, double gamma);
-
+// runScheme runs the finite-difference method for given parameter values
+std::vector<double> runScheme(int J, double L, double alpha, double beta, double gamma, double b_0, double b_L, std::string fileName);
+std::vector<double> analyticalSol(int J, double L, double alpha, double beta, double gamma);
+void runMultiple(std::vector<int> Jvec, double L, double alpha, double beta, double gamma, double b_0, double b_L, std::string fileName, std::string errorFileName);
 #endif

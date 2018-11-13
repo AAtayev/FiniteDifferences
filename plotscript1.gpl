@@ -1,0 +1,11 @@
+set terminal pdf
+set output "Plots.pdf"
+
+set logscale y
+set xlabel "Number of Points"
+set ylabel "Error"
+set key reverse Left outside
+set grid
+plot  "Error_Pe_0.000500.dat" using 1:2 with lp title "Pe = 0.0005", \
+      "Error_Pe_1.000000.dat" using 1:2 with lp title "Pe = 1", \
+      "Error_Pe_10.500000.dat" using 1:2 with lp title "Pe = 10.5"

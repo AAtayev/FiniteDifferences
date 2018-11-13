@@ -1,0 +1,8 @@
+This is a Gauss Seidel data file.
+Iteration k         norm(residual_k)
+0                   5.5
+1                   0.125
+2                   0.00284091
+3                   0.000126197
+4                   7.00735e-06
+5                   4.35787e-07
