@@ -22,7 +22,6 @@ public:
   double getGamma();
   double getb_0();
   double getb_L();
-  // SparseMatrix getA();
 
 
   SparseMatrix constructMatrix(); // Constructs the "differential operator" matrix A

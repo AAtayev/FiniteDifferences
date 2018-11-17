@@ -1,0 +1,14 @@
+set terminal pdf
+set output "Solution_plots_Pe_0.pdf"
+
+set xlabel "x_j"
+set ylabel "u(x_j)"
+set key reverse Left outside
+set grid
+plot  "Solution_Pe_0.000000_J_9.dat" using 1:2 with lp title "h = 0.1", \
+      "Solution_Pe_0.000000_J_19.dat" using 1:2 with lp title "h = 0.05", \
+      "Solution_Pe_0.000000_J_39.dat" using 1:2 with lp title "h = 0.025", \
+      "Solution_Pe_0.000000_J_79.dat" using 1:2 with lp title "h = 0.0125", \
+      "Solution_Pe_0.000000_J_159.dat" using 1:2 with lp title "h = 0.00625", \
+      "Solution_Pe_0.000000_J_319.dat" using 1:2 with lp title "h = 0.003125", \
+      "Solution_Pe_0.000000_J_639.dat" using 1:2 with lp title "h = 0.0015625"

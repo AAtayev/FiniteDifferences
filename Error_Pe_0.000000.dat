@@ -1,0 +1,9 @@
+#This is the Discretisation Points-Error data file for alpha = 1 beta = 0
+#Number of points J Error               
+9                   9.28611e-08         
+19                  9.75248e-08         
+39                  1.00503e-07         
+79                  1.011e-07           
+159                 1.01289e-07         
+319                 1.01306e-07         
+639                 1.01313e-07         

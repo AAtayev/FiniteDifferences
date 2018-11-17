@@ -1,0 +1,356 @@
+
+
+*******************************************************************************
+Wed Nov 14 17:46:19 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat"
+        format = z
+BREAK: bad data on line 1 of datafile
+
+*******************************************************************************
+Wed Nov 14 17:46:28 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat"
+        format = z
+BREAK: bad data on line 1 of datafile
+
+*******************************************************************************
+Wed Nov 14 17:47:12 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat" using (1/($1 + 1)):2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x + b*x + c
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+Warning: Initial value of parameter 'c' is zero.
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 2.7383828262e-04   0.00e+00  3.18e-03    2.000000e+00   1.000000e-30   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 17:50:14 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.4839357109e+03   0.00e+00  7.63e+00    2.000000e+00   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 17:51:31 2018
+
+
+FIT:    data read from "Error_Pe_10.500000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.7987398077e+03   0.00e+00  1.58e+01    4.149014e+00   1.001000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 17:51:49 2018
+
+
+FIT:    data read from "Error_Pe_1.000000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.9134038991e+02   0.00e+00  5.83e+00    1.529901e+00   1.002001e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 17:52:21 2018
+
+
+FIT:    data read from "Error_Pe_1.000000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+iter      chisq       delta/lim  lambda   a             b            
+   0 4.2823357027e+01   0.00e+00  7.63e+00    2.000000e+00   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 17:52:57 2018
+
+
+FIT:    data read from "Error_Pe_10.500000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.1669723506e+01   0.00e+00  7.63e+00    2.000000e+00   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 18:48:56 2018
+
+
+FIT:    data read from "Error_Pe_1.000000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x + b*x + c
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+Warning: Initial value of parameter 'c' is zero.
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 5.1125524754e+04   0.00e+00  3.63e+01    2.000000e+00   1.000000e-30   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 18:52:16 2018
+
+
+FIT:    data read from "Error_Pe_1.000000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+iter      chisq       delta/lim  lambda   a             b            
+   0 4.2823357027e+01   0.00e+00  7.63e+00    2.000000e+00   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 18:55:40 2018
+
+
+FIT:    data read from "Error_Pe_10.500000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.8792383720e+02   0.00e+00  9.03e+00    2.368658e+00   1.001000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 18:56:01 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.0704352483e+03   0.00e+00  5.83e+00    1.529901e+00   1.002001e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 18:56:18 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.4839357109e+03   0.00e+00  7.63e+00    2.000000e+00   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Wed Nov 14 19:06:47 2018
+
+
+FIT:    data read from "Error_Pe_1.000000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1720025217e+01   0.00e+00  7.63e+00    2.000000e+00   2.200000e-01
+   5 5.5392879130e-01  -2.42e-01  7.63e-05    1.719107e+00  -3.607166e+00
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.553929
+rel. change during last iteration : -2.42346e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.281305
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0791327
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1.71911          +/- 0.07266      (4.227%)
+b               = -3.60717         +/- 0.3918       (10.86%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.971  1.000 
+
+
+*******************************************************************************
+Wed Nov 14 19:09:51 2018
+
+
+FIT:    data read from "Error_Pe_10.500000.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.3998311078e+01   0.00e+00  8.20e+00    2.000000e+00   4.250000e+00
+   4 4.0546886829e-03  -6.93e-02  8.20e-04    2.021443e+00   2.729696e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00405469
+rel. change during last iteration : -6.93461e-07
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0240674
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000579241
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.02144          +/- 0.006217     (0.3075%)
+b               = 2.7297           +/- 0.03352      (1.228%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.971  1.000 
+
+
+*******************************************************************************
+Wed Nov 14 19:10:53 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.4044732070e+02   0.00e+00  1.02e+01    2.000000e+00  -9.600000e+00
+   4 1.3737992177e-02  -7.66e-02  1.02e-03   -1.385291e-02  -2.311777e+01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.013738
+rel. change during last iteration : -7.65952e-07
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0443009
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00196257
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -0.0138529       +/- 0.01144      (82.6%)
+b               = -23.1178         +/- 0.0617       (0.2669%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.971  1.000 
+
+
+*******************************************************************************
+Wed Nov 14 19:11:23 2018
+
+
+FIT:    data read from "Error_Pe_0.000500.dat" using (log(1/($1 + 1))):(log($2))
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.4044732070e+02   0.00e+00  1.02e+01    2.000000e+00  -9.600000e+00
+   4 1.3737992177e-02  -7.66e-02  1.02e-03   -1.385291e-02  -2.311777e+01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.013738
+rel. change during last iteration : -7.65952e-07
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0443009
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00196257
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -0.0138529       +/- 0.01144      (82.6%)
+b               = -23.1178         +/- 0.0617       (0.2669%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.971  1.000 

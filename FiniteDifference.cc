@@ -8,7 +8,15 @@
 #include "FiniteDifference.hh"
 
 FiniteDifference::FiniteDifference()
-{}
+{
+  J_ = 1;
+  L_ = 1;
+  alpha_ = 1;
+  beta_ = 1;
+  gamma_ = 0;
+  b_0_ = 1;
+  b_L_ = 0;
+}
 
 FiniteDifference::FiniteDifference(int J, double L, double alpha, double beta, double gamma, double b_0, double b_L)
 {
@@ -69,6 +77,7 @@ double FiniteDifference::getb_L()
 {
   return b_L_;
 }
+
 SparseMatrix FiniteDifference::constructMatrix()
 {
   double h = L_/(double) (J_ + 1); // Setting the mesh size
@@ -111,17 +120,31 @@ std::vector<double> runScheme(int J, double L, double alpha, double beta, double
   // Fin.constructMatrix(h);
   SparseMatrix A = Fin.constructMatrix(); // Construct the "differential operator"(or difference method) matrix A
   A.GaussSeidel(x_0,1e-6,10000000,b, fileName); // Perform Gauss-Seidel on the system AU = f, i.e. Ax = b here
-  // A.printMatrix();
-  // for (int i = 0; i < J; ++i) // This for loop prints the solution obtained from the Gauss-Seidel method
-  // {
-  //   std::cout.width(20);
-  //   std::cout << std::left << x_0[i] << std::endl;
-  // }
-  // for (int i = 0; i < J; ++i)
-  // {
-  //   std::cout.width(20);
-  //   std::cout << std::left << x_0[i] << std::endl;
-  // }
+  std::ofstream myFile;
+  if (gamma == 0)
+  {
+    double Pe = fabs(beta)*L/(double)(2*alpha);
+    myFile.open("Solution_Pe_" + std::to_string(Pe) + "_J_" + std::to_string(J) + ".dat");
+  }
+  else if (beta == 0)
+  {
+    double Da = gamma/alpha;
+    myFile.open("Solution_Da_" + std::to_string(Da) + "_J_" + std::to_string(J) + ".dat");
+  }
+  if (!myFile.good())
+  {
+    throw std::invalid_argument("Failed to open file");
+  }
+  myFile.width(20);
+  myFile << std::left << 0 << b_0 << std::endl;
+  for (int i = 0; i < x_0.size(); ++i)
+  {
+    myFile.width(20);
+    myFile << std::left << (i+1)*L/(double)(J+1) << x_0[i] << std::endl;
+  }
+  myFile.width(20);
+  myFile << std::left << L << b_L << std::endl;
+  myFile.close();
   return x_0;
 }
 
@@ -129,45 +152,67 @@ std::vector<double> analyticalSol(int J, double L, double alpha, double beta, do
 {
   std::vector<double> solution(J);
   double h = L/(double)(J + 1);
-  if (alpha != 0 && gamma == 0)
+  if (alpha != 0 && beta == 0 && gamma == 0)
+  {
+    for(int i = 0; i < J; ++i)
+    {
+      solution[i] = (i+1)*h;
+    }
+  }
+  else if (alpha != 0 && beta != 0 && gamma == 0)
   {
     for(int i = 0; i < J; ++i)
     {
       solution[i] = (1 - exp((beta/alpha)*(i+1)*h))/(1 - exp((beta/alpha)*L));
     }
   }
-  else if (alpha != 0 && beta == 0)
+  else if (alpha != 0 && gamma != 0 && beta == 0)
   {
     for(int i = 0; i < J; ++i)
     {
-      solution[i] = (sinh((gamma/alpha)*(i+1)*h))/(sinh((gamma/alpha)*L));
+      solution[i] = (sinh(sqrt(gamma/alpha)*(i+1)*h))/(sinh(sqrt(gamma/alpha)*L));
     }
   }
+  else
+  {
+    throw std::invalid_argument("No given analytical solution, please update if one exists");
+  }
+  // for (double i : solution)
+  // {
+  //   std::cout << i << '\n';
+  // }
   return solution;
 }
 
 void runMultiple(std::vector<int> Jvec, double L, double alpha, double beta, double gamma, double b_0, double b_L, std::string fileName, std::string errorFileName)
 {
-  double Pe = fabs(beta)*L/(double) (2*alpha);
+  double Pe = fabs(beta)*L/(double) (2*alpha); // Peclet number
   std::ofstream myFile;
   myFile.open(errorFileName + "_Pe_" + std::to_string(Pe) + ".dat", std::ios::out); // Creates and opens a file in the name of myName
   if (!myFile.good())
   {
     throw std::invalid_argument("Failed to open file");
   }
+  myFile << "#This is the Discretisation Points-Error data file for alpha = " << alpha << " beta = " << beta << std::endl;
   myFile.width(20);
-  myFile << std::left << "Number of points J" << "Error" << std::endl;
+  myFile << std::left << "#Number of points J";
+  myFile.width(20);
+  myFile << std::left << "Error" << std::endl;
+  // myFile.width(20);
+  // myFile << std::left << "Order of convergence" << std::endl;
   for (int j: Jvec)
   {
-    std::vector<double> x_sol = runScheme(j, L, alpha, beta, gamma, b_0, b_L, fileName + std::to_string(j) + "_Pe_" + std::to_string(Pe) + ".dat");
+    std::vector<double> x_sol = runScheme(j, L, alpha, beta, gamma, b_0, b_L, fileName + "_J_" + std::to_string(j) + "_Pe_" + std::to_string(Pe));
     std::vector<double> x_an = analyticalSol(j, L, alpha, beta, gamma);
+    double h = L/(double)(j+1);
+    double error = inftyNorm(v_minus_w(x_sol,x_an));
+    // double order = error*((12/(h*h))*(alpha/beta)*(alpha/beta)*(alpha/beta)*(alpha/beta)*(fabs(1-exp(beta*L/alpha))/(exp(beta*j*h/alpha))));
     myFile.width(20);
-    myFile << std::left << j << inftyNorm(v_minus_w(x_sol,x_an)) << std::endl;
-    // for (int i = 0; i < j; ++i)
-    // {
-    //   std::cout.width(20);
-    //   std::cout << std::left << x_sol[i] << x_an[i] <<std::endl;
-    // }
+    myFile << std::left << j;
+    myFile.width(20);
+    myFile << error << std::endl;
+    // myFile.width(20);
+    // myFile << order << std::endl;
   }
   myFile.close();
 }

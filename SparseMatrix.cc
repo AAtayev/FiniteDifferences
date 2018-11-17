@@ -191,7 +191,7 @@ std::ostream& operator<<(std::ostream& stream, const SparseMatrix& matrix)
 void SparseMatrix::GaussSeidel(std::vector<double>& x_0, const double TOL, const int maxIter, const std::vector<double>& b, std::string myName)
 {
   std::ofstream myFile;
-  myFile.open(myName, std::ios::out); // Creates and opens a file in the name of myName
+  myFile.open(myName + ".dat", std::ios::out); // Creates and opens a file in the name of myName
   if (!myFile.good())
   {
     throw std::invalid_argument("Failed to open file");
