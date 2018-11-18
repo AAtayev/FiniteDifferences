@@ -246,7 +246,7 @@ We can in fact solve equation \eqref{Eq:LAD} analytically with the given boundar
 \begin{align}\label{Eq:AnalyticalAD}
 u(x) = \frac{1 - \exp\left(\frac{\beta x}{\alpha}\right)}{1 - \exp\left(\frac{\beta L}{\alpha}\right)}, \quad x \in [0,L],
 \end{align}
-for $ \alpha \neq 0 $ and $ \beta \in \R $. We note that as $ \beta = 0 $, $ u(x) = x $, which is the limiting behaviour of the solution \eqref{Eq:AnalyticalAD}.
+for $ \alpha \neq 0 $ and $ \beta \in \R $. We note that when $ \beta = 0 $, $ u(x) = x $, which is the limiting behaviour of the solution \eqref{Eq:AnalyticalAD}.
 To be able to use the Gauss-Seidel algorithm, we require that the discretisation matrix $ A $ is diagonally dominant. We can guarantee this as along as
 \begin{align*}
 \left|\frac{2\alpha}{h^2}\right| \geq \left|-\frac{\alpha}{h^2} - \frac{\beta}{2h}\right| + \left|-\frac{\alpha}{h^2} + \frac{\beta}{2h}\right| \geq \left|\frac{\beta}{h}\right|,
@@ -255,21 +255,22 @@ that is $ 2|\alpha| > h|\beta| $. Since $ h := \frac{L}{J+1} $, where $ J $ deno
 \begin{align*}
 J+1 \geq \frac{|\beta|L}{|\alpha|} \geq Pe. 
 \end{align*}
-Thus if the number of disretisation points $ J $ is greater that the Pecl\'{e}t number minus one ($ J > Pe - 1 $), then we are guaranteed to have convergence of the approximate solution to the correct solution through the use of Gauss-Seidel. Taking this into account, along with knowing the analytical solution, we can deduce the error, $ \|u_h - u\|_{\infty} $, of the numerical solution with respect to the analytical solution for various different values of $ \alpha, \beta, \gamma $ and number of discritisation points $ J $. The error plots for this can be seen in Figure \ref{Fig:ErrorLAD}.
+Thus if the number of disretisation points $ J $ is greater that the Pecl\'{e}t number minus one ($ J > Pe - 1 $), then we are guaranteed to have convergence of the approximate solution to the correct solution through the use of Gauss-Seidel. Taking this into account, along with knowing the analytical solution, we can deduce the error, $ \|u_h - u\|_{\infty} $, of the numerical solution with respect to the analytical solution for various different values of $ \alpha, \beta $ and number of discritisation points $ J $. The error plots for this can be seen in Figure \ref{Fig:ErrorLAD}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics{Error_plots.pdf}
-	\caption{Error between the analyical and numerical solution of equation \eqref{Eq:LAD} for variaous Pecl\'{e}t numbers $ Pe $ and discretisation points $ J $. \label{Fig:ErrorLAD}}
+	\caption{Log-log plot of the error between the analyical and numerical solution of equation \eqref{Eq:LAD} for variaous Pecl\'{e}t numbers $ Pe $ and mesh sizes $ h $. \label{Fig:ErrorLAD}}
 \end{figure}
 \noindent
-From Figure \ref{Fig:ErrorLAD}, we see that the error between the analytical solution and the numerical solution decreases exponentially for Peclet numbers of order at least 1, but when $ Pe = 0.0005 $, we observe that the error is very small and decreases extremely slowly as the number of points $ J $ increases. We know that by stability
+From Figure \ref{Fig:ErrorLAD}, we see that the error between the analytical solution and the numerical solution decreases exponentially for Peclet numbers of order at least 1, but when $ Pe $ is very close to zero, we observe that the error is very small and decreases extremely slowly as mesh size $ h $ decreases. To explain the small constant error for when the Peclet number is very small, we know that by stability
 \begin{align*}
-\|r_hu - U\|_{\infty} \leq C \|\cL_h(r_h u) - \cL_h U \|_{\infty},
+\|r_hu - u_h\|_{\infty} \leq C \|\cL_h(r_h u) - \cL_h u_h \|_{\infty},
 \end{align*}
-for some constant $ C $. By Taylor expansion we know that
+for some constant $ C $, where $ r_h : C(\overline{\Omega}) \to \overline{\mathbb{U}}_h $ is the restriction operator that allows us to compare continuous functions with grid functions\footnote{Where $ \overline{\mathbb{U}}_h := \Set{U : \overline{\Omega}_h \to \R} $ and $ \overline{\Omega}_h $ is the set of all grid points $ (x_j)_{j=0}^{J+1} $.} and $ u_h $ is the approximate solution $ U $ obtained on the mesh size $ h $. By performing a Taylor expansion about the point $ x + h $ and $ x - h $ for some $ x \in \Omega_h $, we deduce that
 \begin{align*}
-\|r_h u - u_h\|_{\infty} \leq \frac{h^2}{12}\|u^{(4)}\|_{\infty},\quad \|r_hu' - u_h'\|_{\infty} \leq \frac{h^2}{6}\|u^{(3)}\|_{\infty}.
+\|r_h u'' - u''_h\|_{\infty} \leq \frac{h^2}{12}\|u^{(4)}\|_{\infty},\quad \|r_hu' - u_h'\|_{\infty} \leq \frac{h^2}{6}\|u^{(3)}\|_{\infty},
 \end{align*}
+where $ u^{(k)} $ denotes the $ k $th derivative of $ u $ with respect to $ x $.
 Therefore, we can obtain the following bound on the error
 \begin{align*}
 \|r_h u - u_h\|_{\infty} &\leq C\|-\alpha r_h u'' + \beta r_h u' + \alpha u_h'' - \beta u_h'\|_{\infty} \\
@@ -282,36 +283,87 @@ u^{(k)}(x) =-\frac{\left(\frac{\beta}{\alpha}\right)^k}{1 - \exp\left(\frac{\bet
 \end{align*}
 therefore, for $ k = 3,4 $
 \begin{align*}
-\|u^{(k)}\|_{\infty} = \left|\frac{\beta}{\alpha}\right|^{k}\left|\frac{\exp\left(\frac{\beta L}{\alpha}\right)}{1 - \exp\left(\frac{\beta L}{\alpha}\right)}\right| =: g(\alpha,\beta).
+\|u^{(k)}\|_{\infty} = \left|\frac{\beta}{\alpha}\right|^{k}\left|\frac{\exp\left(\frac{\beta L}{\alpha}\right)}{1 - \exp\left(\frac{\beta L}{\alpha}\right)}\right| =\left|\frac{\beta}{\alpha}\right|^{k} g(\alpha,\beta),
 \end{align*}
-Then
+where $ g(\alpha,\beta) = \left|\frac{\exp\left(\frac{\beta L}{\alpha}\right)}{1 - \exp\left(\frac{\beta L}{\alpha}\right)}\right| $. Then
 \begin{align*}
 \|r_hu - u_h\|_{\infty} \leq C\frac{h^2}{4}\frac{|\beta|^4}{|\alpha|^3}g(\alpha,\beta).
 \end{align*}
-Therefore, the order of convergence is at least of order $ 2 $, which was expected since that is the order of consistency.
+Therefore, the order of convergence is at least of order $ 2 $, which was expected by the Fundamental Theorem of Numerical Analysis for FD methods, since $ 2 $ is the order of consistency. We note that since $ Pe = \frac{|\beta|L}{2\alpha} $, and if we assume $ \alpha > 0 $, then
+\begin{align}\label{Eq:PecletInfulenceonError}
+\|r_h - u_h\|_{\infty} \leq C\frac{2h^2\alpha}{L^4}(Pe)^4g(\alpha,\beta).
+\end{align}
+Hence, the fourth order behaviour of the Peclet number in equation \eqref{Eq:PecletInfulenceonError} may explain why the error in Figure \ref{Fig:ErrorLAD} is extremely small for when $ Pe $ is small.
+
+\subsubsection{Determining the Order of Convergence}
+Assuming the same notation as in the previous subsection, we say that a numerical scheme has order of convergence $ p $ if there exists a constant $ C $ independent of $ h $ such that
+\begin{align*}
+\|r_hu - u_h\|_{\infty} \leq C h^p,
+\end{align*}
+where $ u $ denotes the exact solution of the required BVP and $ u_h $ denotes the approximate solution obtained through said numerical scheme under mesh size $ h $. We can assume that we may write
+\begin{align*}
+\|r_h u - u_h\|_{\infty} = Ch^p + \cO(h^{p+1}),
+\end{align*}
+then by taking the log of each side, we obtain
+\begin{align*}
+\log(\|r_hu - u_h\|_{\infty}) = C + p\log h + \cO(\log(h^{p+1})),
+\end{align*}
+therefore, we may simply determine the order of convergence, $ p $, by plotting the curve $ h^{q} $ alongside the log-log plot of error against mesh size $ h $ and see if the error curves line up with $ h^q $, in which case it is safe to assume that $ p = q $. Therefore, by analysing the plots of Figure \ref{Fig:ErrorLAD}, we can state that the order of convergence, when the P\'{e}clet number is large enough, is approximately $ 2 $ by comparing it to the the curve $ h^2 $ plotted alongside the data, although is slightly smaller than 2 for $ Pe = 1 $ when the mesh size is small. To instead dertmine $ p $ more precisely, we can proceed as follows:
+\begin{align*}
+\frac{\|u - u_{h}\|_{\infty}}{\|u-u_{h/2}\|_{\infty}} = \frac{C h^p + \cO(h^{p+1})}{C(h/2)^{p} + \cO((h/2)^{p+1})} = 2^p + \cO(h).
+\end{align*}
+Then taking the $ \log_2 $ of both sides yields
+\begin{align*}
+\log_2\left(\frac{\|u - u_{h}\|_{\infty}}{\|u-u_{h/2}\|_{\infty}}\right) = p + \cO(\log_2(h)),
+\end{align*}
+which for $ h $ small yields a good approximation of the order of convergence, $ p $, of the numerical scheme. By performing this analysis on the errors obtained for different mesh sizes (see Figure \ref{Fig:ErrorLAD}), the precise order of convergence is outlined in Table \ref{Tab:OrderofConvergence} for various different P\'{e}clet numbers. In this table, the \emph{guess} made by looking at the data in Figure \ref{Fig:ErrorLAD} agrees with the precise order of convergence calculated.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c}
+		P\'{e}clet number & Order of convergence \\
+		\hline 
+		0 & -0.002694509 \\
+		0.0005 & 0.001483022 \\
+		1 & 1.872685377 \\
+		10.5 & 2.007963453  
+	\end{tabular}
+	\caption{Precise values of the order of convergence of the Gauss-Seidel numerical scheme when performed on the linear system \eqref{Eq:LinearSystem} for various values of P\'{e}clet numbers. The order of convergence was calculated by applying the method described in Section 3.2 Determining the Order of Convergence using mesh sizes $ h = \frac{1}{80} $ and $ \frac{h}{2} = \frac{1}{160} $.\label{Tab:OrderofConvergence}}
+\end{table}
+
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics{Solution_plots_Pe_0.pdf}
+	\textbf{Numerical Solution for $ \alpha = 1,\ \beta = 0,\ L = 1,\ Pe = 0$}\par\medskip
+	\includegraphics[width=\linewidth]{Solution_plots_Pe_0.pdf}
+	\caption{Solution plots of the BVP \eqref{Eq:LAD} for $ \alpha = 1,\ \beta = 0,\ L = 1 $ and various different mesh sizes $ h $.\label{Fig:NS1}}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics{{Solution_plots_Pe_0.0005}.pdf}
+	\textbf{Numerical Solution for $ \alpha = 1000,\ \beta = 1,\ L = 1,\ Pe = 0.0005$}\par\medskip
+	\includegraphics[width=\linewidth]{{Solution_plots_Pe_0.0005}.pdf}
+	\caption{Solution plots of the BVP \eqref{Eq:LAD} for $ \alpha = 1000,\ \beta = 1,\ L = 1 $ and various different mesh sizes $ h $.\label{Fig:NS2}}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics{Solution_plots_Pe_1.pdf}
+	\textbf{Numerical Solution for $ \alpha = 0.25,\ \beta = 0.5,\ L = 1,\ Pe = 1$}\par\medskip
+	\includegraphics[width=\linewidth]{Solution_plots_Pe_1.pdf}
+	\caption{Solution plots of the BVP \eqref{Eq:LAD} for $ \alpha = 0.25,\ \beta = 0.5,\ L = 1 $ and various different mesh sizes $ h $.\label{Fig:NS3}}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics{{Solution_plots_Pe_10.5}.pdf}
+	\textbf{Numerical Solution for $ \alpha = 1,\ \beta = 21,\ L = 1,\ Pe = 10.5$}\par\medskip
+	\includegraphics[width=\linewidth]{{Solution_plots_Pe_10.5}.pdf}
+	\caption{Solution plots of the BVP \eqref{Eq:LAD} for $ \alpha = 1,\ \beta = 21,\ L = 1 $ and various different mesh sizes $ h $.\label{Fig:NS4}}
 \end{figure}
 \subsection{Linear Diffusion-Reaction Equation}
 We can also solve equation \eqref{Eq:LDR} analytically with the given boundary conditions to obtain a unique solution of the following form
 \begin{align*}
-u(x) = \frac{\sinh\left(\sqrt{\frac{\gamma}{\alpha}}x\right)}{\sinh\left(\sqrt{\frac{\gamma}{\alpha}}L\right)}, \quad x \in [0,L].
+u(x) = \frac{\sinh\left(\sqrt{\frac{\gamma}{\alpha}}x\right)}{\sinh\left(\sqrt{\frac{\gamma}{\alpha}}L\right)}, \quad x \in [0,L],
 \end{align*}
+and then apply a similar analysis to that done to equation \eqref{Eq:LAD} in Section 3.1. We omit the analysis in this report since the method is almost identical.
 
 \section{Conclusion}
+In this report, we have described the finite-difference discretisation of the general advection-diffusion-reaction equation \eqref{Eq:GeneralADR} for general parameter values $ \alpha,\beta $ and $ \gamma $. We further described the numerical implementation of this discretisation which we used to obtain approximate numerical solutions to the equation \eqref{Eq:LAD} for various diffrent mesh sizes $ h $ in section 3.1. The numerical scheme, Gauss-Seidel, used to solve the linear system of equations \eqref{Eq:LinearSystem} is accurate, as can be seen from the error plots in Figure \ref{Fig:ErrorLAD}, and we have determined both visually and numerically that the order of convergence of this scheme is approximately $ 2 $, and this agrees (as we expect) with the Fundamental Theorem of Numerical Analysis for FD schemes since the order of consistency is $ 2 $ (see Figure \ref{Fig:ErrorLAD} and Table \ref{Tab:OrderofConvergence}). Furthermore, we can see that the numerical solutions are accurate (to a certain degree of accurary) by comparing the numerical solution plots of the BVP \eqref{Eq:LAD}, shown in Figures \ref{Fig:NS1}, \ref{Fig:NS2}, \ref{Fig:NS3}, \ref{Fig:NS4}, with the corresponding analytical solution \eqref{Eq:AnalyticalAD}.
 
 
 

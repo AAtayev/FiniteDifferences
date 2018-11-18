@@ -198,21 +198,16 @@ void runMultiple(std::vector<int> Jvec, double L, double alpha, double beta, dou
   myFile << std::left << "#Number of points J";
   myFile.width(20);
   myFile << std::left << "Error" << std::endl;
-  // myFile.width(20);
-  // myFile << std::left << "Order of convergence" << std::endl;
   for (int j: Jvec)
   {
     std::vector<double> x_sol = runScheme(j, L, alpha, beta, gamma, b_0, b_L, fileName + "_J_" + std::to_string(j) + "_Pe_" + std::to_string(Pe));
     std::vector<double> x_an = analyticalSol(j, L, alpha, beta, gamma);
     double h = L/(double)(j+1);
     double error = inftyNorm(v_minus_w(x_sol,x_an));
-    // double order = error*((12/(h*h))*(alpha/beta)*(alpha/beta)*(alpha/beta)*(alpha/beta)*(fabs(1-exp(beta*L/alpha))/(exp(beta*j*h/alpha))));
     myFile.width(20);
     myFile << std::left << j;
     myFile.width(20);
     myFile << error << std::endl;
-    // myFile.width(20);
-    // myFile << order << std::endl;
   }
   myFile.close();
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.10.10)  17 NOV 2018 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.10.10)  18 NOV 2018 18:07
 entering extended mode
 **./report.tex
 (report.tex
@@ -1374,70 +1374,78 @@ File: Error_plots.pdf Graphic file (type pdf)
 Package pdftex.def Info: Error_plots.pdf  used on input line 261.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
 
-[5 <./Error_plots.pdf>]
-<Solution_plots_Pe_0.pdf, id=45, 361.35pt x 216.81pt>
+[5 <./Error_plots.pdf>] [6]
+<Solution_plots_Pe_0.pdf, id=53, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_0.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_0.pdf>
-Package pdftex.def Info: Solution_plots_Pe_0.pdf  used on input line 294.
-(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-<Solution_plots_Pe_0.0005.pdf, id=46, 361.35pt x 216.81pt>
+Package pdftex.def Info: Solution_plots_Pe_0.pdf  used on input line 337.
+(pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
+<Solution_plots_Pe_0.0005.pdf, id=54, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_0.0005.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_0.0005.pdf>
-Package pdftex.def Info: Solution_plots_Pe_0.0005.pdf  used on input line 298.
-(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-<Solution_plots_Pe_1.pdf, id=47, 361.35pt x 216.81pt>
+Package pdftex.def Info: Solution_plots_Pe_0.0005.pdf  used on input line 343.
+(pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Solution_plots_Pe_1.pdf, id=55, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_1.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_1.pdf>
-Package pdftex.def Info: Solution_plots_Pe_1.pdf  used on input line 302.
-(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-<Solution_plots_Pe_10.5.pdf, id=48, 361.35pt x 216.81pt>
+Package pdftex.def Info: Solution_plots_Pe_1.pdf  used on input line 349.
+(pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Solution_plots_Pe_10.5.pdf, id=56, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_10.5.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_10.5.pdf>
-Package pdftex.def Info: Solution_plots_Pe_10.5.pdf  used on input line 306.
-(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+Package pdftex.def Info: Solution_plots_Pe_10.5.pdf  used on input line 355.
+(pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./Solution_plots_Pe_0.pdf> <./Solution_plots_Pe_0.0005.pdf
+[7 <./Solution_plots_Pe_0.pdf>]
 
-pdfTeX warning: pdflatex (file ./Solution_plots_Pe_0.0005.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->] [7 <./Solution_plots_Pe_1.pdf> <./Solution_plots_Pe_10.5.pdf
+LaTeX Warning: Text page 8 contains only floats.
 
-pdfTeX warning: pdflatex (file ./Solution_plots_Pe_10.5.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
->] (report.aux) ) 
+[8 <./Solution_plots_Pe_0.0005.pdf> <./Solution_plots_Pe_1.pdf
+
+pdfTeX warning: pdflatex (file ./Solution_plots_Pe_1.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] [9 <./Solution_plots_Pe_10.5.pdf>] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 35464 strings out of 492971
- 820350 string characters out of 3135072
+ 35499 strings out of 492971
+ 820719 string characters out of 3135072
  1158581 words of memory out of 3000000
- 38833 multiletter control sequences out of 15000+200000
- 545539 words of font info for 70 fonts, out of 3000000 for 9000
+ 38856 multiletter control sequences out of 15000+200000
+ 550439 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,16n,96p,972b,1203s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/sha
-re/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/share/mikt
-ex-texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/share/miktex-texm
-f/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/share/miktex-texmf/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex-texmf/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/a
-msfonts/cm/cmti10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb></home/masdoc/.miktex/texmfs/install/fonts/type1/public/mathabx
--type1/matha10.pfb></home/masdoc/.miktex/texmfs/install/fonts/type1/public/math
-abx-type1/matha8.pfb></home/masdoc/.miktex/texmfs/install/fonts/type1/public/ma
-thabx-type1/mathx10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on report.pdf (7 pages, 359826 bytes).
+ 67i,16n,96p,1290b,1203s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/share/miktex-te
+xmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/miktex-texmf/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/miktex-texmf/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/share/miktex-texmf/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb></usr/local/share/miktex-texmf/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/
+cm/cmmi9.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/shar
+e/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex
+-texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/share/miktex-texmf/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texmf/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb></usr/local/share/miktex-texmf/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb></home/masdoc/.miktex/texmfs/install/fonts/type1/p
+ublic/mathabx-type1/matha10.pfb></home/masdoc/.miktex/texmfs/install/fonts/type
+1/public/mathabx-type1/matha6.pfb></home/masdoc/.miktex/texmfs/install/fonts/ty
+pe1/public/mathabx-type1/matha8.pfb></home/masdoc/.miktex/texmfs/install/fonts/
+type1/public/mathabx-type1/matha9.pfb></home/masdoc/.miktex/texmfs/install/font
+s/type1/public/mathabx-type1/mathx10.pfb></usr/local/share/miktex-texmf/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (9 pages, 298428 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

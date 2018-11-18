@@ -4,5 +4,6 @@
 \contentsline {subsection}{\numberline {2.2}Numerical Implementation}{3}
 \contentsline {section}{\numberline {3}Results}{4}
 \contentsline {subsection}{\numberline {3.1}Linear Advection-Diffusion Equation}{4}
-\contentsline {subsection}{\numberline {3.2}Linear Diffusion-Reaction Equation}{7}
-\contentsline {section}{\numberline {4}Conclusion}{7}
+\contentsline {subsubsection}{\numberline {3.1.1}Determining the Order of Convergence}{6}
+\contentsline {subsection}{\numberline {3.2}Linear Diffusion-Reaction Equation}{9}
+\contentsline {section}{\numberline {4}Conclusion}{9}

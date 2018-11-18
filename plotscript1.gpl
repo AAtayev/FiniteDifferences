@@ -1,7 +1,7 @@
 set terminal pdf
 set output "Error_plots.pdf"
 
-set logscale y
+set logscale xy
 set xlabel "Mesh-size h"
 set ylabel "Error"
 set key reverse Left outside
