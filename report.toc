@@ -5,5 +5,5 @@
 \contentsline {section}{\numberline {3}Results}{4}
 \contentsline {subsection}{\numberline {3.1}Linear Advection-Diffusion Equation}{4}
 \contentsline {subsubsection}{\numberline {3.1.1}Determining the Order of Convergence}{6}
-\contentsline {subsection}{\numberline {3.2}Linear Diffusion-Reaction Equation}{9}
-\contentsline {section}{\numberline {4}Conclusion}{9}
+\contentsline {subsection}{\numberline {3.2}Linear Diffusion-Reaction Equation}{7}
+\contentsline {section}{\numberline {4}Conclusion}{10}

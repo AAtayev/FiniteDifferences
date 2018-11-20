@@ -1,0 +1,12 @@
+\begin{table}[h!]
+\centering
+\begin{tabular}{c|c}
+P\'{e}clet number & Order of convergence \\
+\hline
+0 & -0.002694509 \\
+0.0005 & 0.001483022 \\
+1 & 1.872685377 \\
+10.5 & 2.007963453
+\end{tabular}
+\caption{Precise values of the order of convergence of the Gauss-Seidel numerical scheme when performed on the linear system \eqref{Eq:LinearSystem} for various values of P\'{e}clet numbers. The order of convergence was calculated by applying the method described in section \ref{Sec:Determining the Order of Convergence} using mesh sizes $ h = \frac{1}{80} $ and $ \frac{h}{2} = \frac{1}{160} $.\label{Tab:OrderofConvergence}}
+\end{table}

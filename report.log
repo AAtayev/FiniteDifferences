@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.10.10)  18 NOV 2018 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.10.10)  20 NOV 2018 13:39
 entering extended mode
 **./report.tex
 (report.tex
@@ -1256,6 +1256,14 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 rks.code.tex
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 )))
+(/home/masdoc/.miktex/texmfs/install/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/local/share/miktex-texmf/tex/latex/base/flafter.sty
+Package: flafter 2018/01/08 v1.4c Standard LaTeX floats after reference (FMi)
+Applying: [2015/01/01] float order in 2-column on input line 49.
+Already applied: [0000/00/00] float order in 2-column on input line 151.
+)
 (/home/masdoc/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
@@ -1270,18 +1278,18 @@ File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1338,13 +1346,13 @@ LaTeX Font Info:    ... okay on input line 94.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 94.
+ on input line 96.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 95.
+LaTeX Font Info:    Try loading font information for U+msa on input line 97.
 (/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 95.
+LaTeX Font Info:    Try loading font information for U+msb on input line 97.
 
 (/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1354,14 +1362,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 100.
+(mdframed)              on input line 102.
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--110
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--110
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
 
  []
 
@@ -1371,28 +1379,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--110
 <Error_plots.pdf, id=33, 361.35pt x 216.81pt>
 File: Error_plots.pdf Graphic file (type pdf)
 <use Error_plots.pdf>
-Package pdftex.def Info: Error_plots.pdf  used on input line 261.
-(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
+Package pdftex.def Info: Error_plots.pdf  used on input line 264.
+(pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 [5 <./Error_plots.pdf>] [6]
 <Solution_plots_Pe_0.pdf, id=53, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_0.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_0.pdf>
-Package pdftex.def Info: Solution_plots_Pe_0.pdf  used on input line 337.
+Package pdftex.def Info: Solution_plots_Pe_0.pdf  used on input line 340.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <Solution_plots_Pe_0.0005.pdf, id=54, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_0.0005.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_0.0005.pdf>
-Package pdftex.def Info: Solution_plots_Pe_0.0005.pdf  used on input line 343.
+Package pdftex.def Info: Solution_plots_Pe_0.0005.pdf  used on input line 346.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Solution_plots_Pe_1.pdf, id=55, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_1.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_1.pdf>
-Package pdftex.def Info: Solution_plots_Pe_1.pdf  used on input line 349.
+Package pdftex.def Info: Solution_plots_Pe_1.pdf  used on input line 352.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1400,52 +1411,54 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Solution_plots_Pe_10.5.pdf, id=56, 361.35pt x 216.81pt>
 File: Solution_plots_Pe_10.5.pdf Graphic file (type pdf)
 <use Solution_plots_Pe_10.5.pdf>
-Package pdftex.def Info: Solution_plots_Pe_10.5.pdf  used on input line 355.
+Package pdftex.def Info: Solution_plots_Pe_10.5.pdf  used on input line 358.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./Solution_plots_Pe_0.pdf>]
+[7] [8 <./Solution_plots_Pe_0.pdf> <./Solution_plots_Pe_0.0005.pdf
 
-LaTeX Warning: Text page 8 contains only floats.
+pdfTeX warning: pdflatex (file ./Solution_plots_Pe_0.0005.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>] [9 <./Solution_plots_Pe_1.pdf> <./Solution_plots_Pe_10.5.pdf
 
-[8 <./Solution_plots_Pe_0.0005.pdf> <./Solution_plots_Pe_1.pdf
+pdfTeX warning: pdflatex (file ./Solution_plots_Pe_10.5.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>] [10
 
-pdfTeX warning: pdflatex (file ./Solution_plots_Pe_1.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->] [9 <./Solution_plots_Pe_10.5.pdf>] (report.aux) ) 
+] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 35499 strings out of 492971
- 820719 string characters out of 3135072
- 1158581 words of memory out of 3000000
- 38856 multiletter control sequences out of 15000+200000
+ 35524 strings out of 492971
+ 821301 string characters out of 3135072
+ 1159639 words of memory out of 3000000
+ 38874 multiletter control sequences out of 15000+200000
  550439 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,16n,96p,1290b,1203s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/share/miktex-te
-xmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/share/miktex-texmf/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/share/miktex-texmf/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/share/miktex-texmf/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb></usr/local/share/miktex-texmf/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/
-cm/cmmi9.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/shar
-e/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex
--texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/share/miktex-texmf/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texmf/fonts/t
-ype1/public/amsfonts/cm/cmti10.pfb></usr/local/share/miktex-texmf/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb></home/masdoc/.miktex/texmfs/install/fonts/type1/p
-ublic/mathabx-type1/matha10.pfb></home/masdoc/.miktex/texmfs/install/fonts/type
-1/public/mathabx-type1/matha6.pfb></home/masdoc/.miktex/texmfs/install/fonts/ty
-pe1/public/mathabx-type1/matha8.pfb></home/masdoc/.miktex/texmfs/install/fonts/
-type1/public/mathabx-type1/matha9.pfb></home/masdoc/.miktex/texmfs/install/font
-s/type1/public/mathabx-type1/mathx10.pfb></usr/local/share/miktex-texmf/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (9 pages, 298428 bytes).
+</usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
+al/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/shar
+e/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/share/mikte
+x-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/share/miktex-texmf
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/share/miktex-texmf/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/local/share/miktex-texmf/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/local/share/miktex-texmf/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+/usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/
+masdoc/.miktex/texmfs/install/fonts/type1/public/mathabx-type1/matha10.pfb></ho
+me/masdoc/.miktex/texmfs/install/fonts/type1/public/mathabx-type1/matha6.pfb></
+home/masdoc/.miktex/texmfs/install/fonts/type1/public/mathabx-type1/matha8.pfb>
+</home/masdoc/.miktex/texmfs/install/fonts/type1/public/mathabx-type1/matha9.pf
+b></home/masdoc/.miktex/texmfs/install/fonts/type1/public/mathabx-type1/mathx10
+.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on report.pdf (10 pages, 300463 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
